@@ -72,6 +72,12 @@ public class AHProcess {
             System.out.print(" ");
         }
         System.out.println("]\n");
+        System.out.print("\nWEIGHTED SUM VALUE: [");
+        for(double v: ahb.WEIGHT_SUMS){
+            System.out.print(v);
+            System.out.print(" ");
+        }
+        System.out.println("]\n");
         ahb.printMatrix();
     }
     //SETTING UP THE LENGTH OF THE MATRIX
