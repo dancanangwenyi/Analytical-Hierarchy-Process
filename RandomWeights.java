@@ -44,7 +44,8 @@ public class RandomWeights{
     }
     public static double getRandomDoubleBetweenRange(double min, double max){
         double weight = (Math.random()*((max-min)+1))+min;
-        double val = (double)Math.round(weight*1000)/1000;
+        double val1 = (double)Math.round(weight);
+        double val = (double)Math.round(val1*1000)/1000;
         return val;
     }
     public void printMatrices(){
@@ -53,7 +54,7 @@ public class RandomWeights{
             for(int j=0 ; j<GENERATED_WEIGHTS.get(i).size() ; j++){
                 for(int k=0 ; k<GENERATED_WEIGHTS.get(i).size() ; k++){
                     double value = GENERATED_WEIGHTS.get(i).get(j).get(k);
-                    System.out.print(value+ "    ");
+                    System.out.print(value+ " ");
                 }
                 System.out.println();
             }
