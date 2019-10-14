@@ -32,10 +32,10 @@ public class AHProcess {
         this.CI = 0.0;
         this.CR =0.0;
         //  C D T B
-        this.CRITERIA_WEIGHTS.add(0.137);
-        this.CRITERIA_WEIGHTS.add(0.271);
-        this.CRITERIA_WEIGHTS.add(0.537);
-        this.CRITERIA_WEIGHTS.add(0.056);
+        // this.CRITERIA_WEIGHTS.add(0.137);
+        // this.CRITERIA_WEIGHTS.add(0.271);
+        // this.CRITERIA_WEIGHTS.add(0.537);
+        // this.CRITERIA_WEIGHTS.add(0.056);
 
     }
     /**
@@ -190,7 +190,7 @@ public class AHProcess {
             }
             // System.out.println(sum);
             val = sum/(NORMALIZED_MATRIX_A.size());
-           // CRITERIA_WEIGHTS.add((double)Math.round(val*1000)/1000);
+            CRITERIA_WEIGHTS.add((double)Math.round(val*1000)/1000);
             //System.out.println(val);
         }
         for(int s=0 ; s<MATRIX_A.size() ; s++){
@@ -308,7 +308,7 @@ public class AHProcess {
                 }  
             }
             WIFI_COST_MAP.put(sum_alternative,WIFI_ALTERNATIVES.get(i).get(2));
-            //System.out.println("Total cost for wifi"+i+" is "+sum_alternative+" with throughput: "+WIFI_ALTERNATIVES.get(i).get(2));
+            System.out.println("Total cost for wifi"+i+" is "+sum_alternative+" with throughput: "+WIFI_ALTERNATIVES.get(i).get(2));
             if(sum_alternative < minimum){
                 minimum = sum_alternative;
                 best_wifi=i;
@@ -363,7 +363,7 @@ public class AHProcess {
                 
             }
             LTE_COST_MAP.put(sum_alternative,LTE_ALTERNATIVES.get(i).get(2));
-            //System.out.println("Total cost for LTE"+i+" is "+sum_alternative+" with a T of: "+LTE_ALTERNATIVES.get(i).get(2));
+            System.out.println("Total cost for LTE"+i+" is "+sum_alternative+" with a T of: "+LTE_ALTERNATIVES.get(i).get(2));
             if(sum_alternative < minimum){
                 minimum = sum_alternative;
                 best_lte=i;
