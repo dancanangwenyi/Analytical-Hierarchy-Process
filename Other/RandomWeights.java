@@ -10,8 +10,6 @@ public class RandomWeights{
         this.ITERATIONS = n;
     }
     public static void main(String[] args) {
-
-        
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the size of the matrix, n: ");
         int n = Integer.parseInt(scanner.nextLine());
